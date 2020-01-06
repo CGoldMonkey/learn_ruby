@@ -1,10 +1,8 @@
 #write your code here
-def ftoc(temperature)
-  celsius = ((temperature-32)*(5.0/9.0))
-  return celsius
+def ftoc(fahrenheit_temperature)
+  return (fahrenheit_temperature - 32) * 5/9  
 end
 
-def ctof(celsius)
-  fahrenheit = ((celsius*9.0/5.0)+32)
-  return fahrenheit
+def ctof(celsius_temperature)
+  return (celsius_temperature * (9.0/5.0)) + 32
 end
