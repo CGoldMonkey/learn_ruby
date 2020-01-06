@@ -1,42 +1,44 @@
 #write your code here
-def add(first, second)
-  total = first+second
-  return total
+def add(first_number, second_number)
+  first_number + second_number
 end
 
-def subtract(first, second)
-  total = first-second
-  return total
+def subtract(first_number, second_number)
+  first_number - second_number
 end
 
-def sum(array)
-  total = 0
-  array.each do |number|
-  	total += number
+def sum(array_to_sum)
+  sum = 0
+  if array_to_sum.empty?
+    return sum
+  else
+    array_to_sum.each do |number|
+      sum += number
+    end
   end
-  return total
+  return sum
 end
 
-def multiply(first, *second)
-  total = first
-  second.each do |number|
-    total *= number
+def multiply(first, second, *remaining_numbers)
+  total = first * second
+  if remaining_numbers.empty?
+    return total
+  else
+    remaining_numbers.each do |number|
+      total *= number
+    end
   end
-  return total
+  total
 end
 
-def power(number, exponent)
-  return (number**exponent)	
+def power(first, second)
+  first**second
 end
 
 def factorial(number)
-  answer = 1
-  if number == 0
-    return answer
+  if (number == 0 || number == 1)
+    return 1
+  else
+    return number * factorial(number-1)
   end
-  while number > 0
-    answer *= number
-    number -= 1  	
-  end
-  return answer
 end
