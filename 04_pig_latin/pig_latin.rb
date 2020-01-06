@@ -1,4 +1,51 @@
 #write your code here
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+=begin 
 def translate(text)
   letter = text[0]
   finished = false
@@ -61,3 +108,5 @@ def more_than_one(original)
   end
   return words.join(' ')
 end
+
+=end
