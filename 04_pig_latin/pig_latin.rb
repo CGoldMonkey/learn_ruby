@@ -1,48 +1,41 @@
 #write your code here
+def translate(text)
+  words = text.split(' ')
+  words.map! do |word|
+    while !(word.start_with?('a', 'e', 'i', 'o', 'u'))
+      if word.start_with?('qu')
+        word += 'qu'
+        word[0, 2] = ''
+      else    
+        first_letter = word[0]
+        word += first_letter
+        word[0] = ''
+      end
+    end
 
+    if word.match?(/[A-Z]/)
+      word.downcase!.capitalize!
+    end
 
+    word += 'ay'
 
+    if word.match?(/\W/)
+      puctuation = word.match(/\W/).to_s
+      word.sub!(/\W/, '')
+      word += puctuation
+    end
+    word
+  end
 
+  translated_text = words.join(' ')
 
+  return translated_text
+end
 
+# Rule 1: If a word begins with a vowel sound, add an "ay" sound to the end of the word.
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+# Rule 2: If a word begins with a consonant sound, move it to the end of the word, and then add 
+# an "ay" sound to the end of the word.
 
 
 =begin 
