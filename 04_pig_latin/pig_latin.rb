@@ -2,7 +2,7 @@
 def translate(text)
   words = text.split(' ')
   words.map! do |word|
-    while !(word.start_with?('a', 'e', 'i', 'o', 'u'))
+    while !(word.downcase.start_with?('a', 'e', 'i', 'o', 'u'))
       if word.start_with?('qu')
         word += 'qu'
         word[0, 2] = ''

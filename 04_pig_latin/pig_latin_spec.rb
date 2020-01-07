@@ -88,6 +88,11 @@ describe "#translate" do
     expect(s).to eq("Eetingsgray!")
   end
 
+  it "retains the punctuation from the original phrase with more than one sentences" do
+    s = translate("Greetings! Are you okay?")
+    expect(s).to eq("Eetingsgray! Areay ouyay okayay?")
+  end
+
 end
 
 
