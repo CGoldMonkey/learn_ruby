@@ -1,4 +1,26 @@
 class Timer
+  #write your code here
+  attr_accessor :seconds
+
+  def initialize
+    @seconds = 0
+  end
+
+  def time_string
+    hours = @seconds/3600
+    remaing_seconds = @seconds - (hours * 3600)
+    minutes = remaing_seconds/60
+    remaing_seconds = remaing_seconds - (minutes * 60)
+    second = remaing_seconds%60
+
+    string = "%02d:%02d:%02d"% [hours, minutes, second]
+    return string
+  end
+end
+
+=begin
+Old code from before I redid the problem
+class Timer
   attr_accessor :seconds
   def initialize
     @seconds = 0
@@ -35,3 +57,7 @@ class Timer
     return time
   end
 end
+
+
+
+=end
